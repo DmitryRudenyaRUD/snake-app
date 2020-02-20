@@ -4,9 +4,30 @@
     height: 100vh;
     width: 100vw;
 }
-.h1 {
-    padding: 5vh 5vw;
-    font:bold 8vh/3vh Helvetica;
+.span {
+    padding: 2vh 1vw;
+    font:bold 8vh/13vh Helvetica;
     text-shadow: 5px 6px 1px #373740, 0 0 1em #ffb900;
     color: #fbfb3d;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+}
+.clock{
+    background: url('../images/clock.png') no-repeat;
+    background-size: 100%;
+    height: 9vh;
+    width: 4vw;
+    margin-top: 4vh;
+    margin-left: 7vw;
+}
+.score {
+    background: url('../images/sc.jpg') no-repeat;
+    background-size: 100%;
+    height: 8vh;
+    width: 4vw;
+    margin-top: 4vh;
+    margin-left: 3vw;
+    border-radius: 1vw;
 }

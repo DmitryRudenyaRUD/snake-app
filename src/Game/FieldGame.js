@@ -1,16 +1,10 @@
 import React from 'react';
 import css from './FieldGame.module.css';
 import Cell from './Cell';
-import {handlerClasses} from './logic';
 
 export default class FieldGame extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
 
     render() {
-        const store = this.props.store;
         const fieldSize = this.props.store.fieldSize;
         const columnSize = this.props.store.columnSize;
         const fieldRow = [...new Array(fieldSize).keys()];
@@ -24,10 +18,8 @@ export default class FieldGame extends React.Component {
                             fieldRow.map(x => (
                                 <Cell
                                     key={x}
-                                    className={handlerClasses(
-                                        {x: x, y: y},
-                                        store
-                                    )}/>
+                                    position={{x: x, y: y}}
+                                    store={this.props.store}/>
                             ))}
                         </div>
                     ))

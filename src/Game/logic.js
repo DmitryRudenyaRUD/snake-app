@@ -1,31 +1,47 @@
-import css from "./Cell.module.css";
+import React from 'react';
+import {store} from '../State'
+import Mouse from "./Mouse";
+import Snake from './Snake';
 
-export function handlerClasses(position, store) {
-    const pos = position;
-    const snake = store.snakeSegments;
-    const head = store.snakeHead;
-    const mouse__1 = store.mouse__1;
-    const mouse__2 = store.mouse__2;
-    const mouse__3 = store.mouse__3;
+export function handler(props) {
+    const pos = props.position;
+    const snake = props.store.snakeSegments;
+    const head = props.store.snakeHead;
+    const mouse__1 = props.store.mouse__1;
+    const mouse__2 = props.store.mouse__2;
 
-    snake.map((seg) => {
-        if(seg.x === pos.x && seg.y === pos.y) return css.snake
-    });
+    for(let seg of snake) {
+        if(seg.x === pos.x && seg.y === pos.y) return(<Snake />)
+    }
 
     switch (`${pos.x} ${pos.y}`) {
         case `${head.x} ${head.y}`:
-            return css.head;
-            break;
+            return ;
         case `${mouse__1.x} ${mouse__1.y}`:
-            return css.mouse;
-            break;
+            return (<Mouse />) ;
         case `${mouse__2.x} ${mouse__2.y}`:
-            return css.mouse;
-            break;
-        case `${mouse__3.x} ${mouse__3.y}`:
-            return css.mouse;
-            break;
+            return (<Mouse />);
             default:
-               return css.cell;
+               return;
     }
 }
+
+export function time(renderFunc, tact) {
+
+    let [h, m, s] = store.time.split(':').map((item) => parseInt(item));
+
+    if(tact === 9) {
+        [s, m] = s === 59 ? [0, ++m] : [++s, m];
+        [h, m] = m === 60 ? [0, ++h] : [h, m];
+
+        m = m < 10 ? '0' + m : m;
+        s = s < 10 ? '0' + s : s;
+        let time = `${h}:${m}:${s}`;
+
+        store.recordTime = (time);
+    }
+    renderFunc();
+}
+
+
+

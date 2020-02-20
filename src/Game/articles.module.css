@@ -1,0 +1,14 @@
+.snake {
+    background: url('../images/s2.jpg') ;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    font-size: 25px;
+}
+.m {
+    background: url('../images/m.png') no-repeat center center fixed;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    font-size: 25px;
+}

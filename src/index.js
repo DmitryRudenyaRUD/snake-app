@@ -5,11 +5,13 @@ import View from './View';
 import { BrowserRouter } from 'react-router-dom';
 import {store} from './State';
 
-
-ReactDOM.render((
-    <BrowserRouter>
-        <View store={store}/>
-    </BrowserRouter>
-), document.getElementById('root'));
+function renderFunc() {
+    ReactDOM.render((
+        <BrowserRouter>
+            <View store={store} renderFunc={renderFunc}/>
+        </BrowserRouter>
+    ), document.getElementById('root'));
+}
+renderFunc();
 
 
