@@ -1,0 +1,16 @@
+.cell {
+    width: 1.5vw;
+    height: 1.5vw;
+    border: 1px solid white;
+    font: 14px/10px Helvetica;
+    color: white;
+}
+.snake {
+    background-color: darkgreen;
+}
+.head {
+    background-color: darkcyan;
+}
+.mouse {
+    background-color: #a58fa9;
+}
