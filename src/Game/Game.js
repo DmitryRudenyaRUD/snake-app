@@ -1,15 +1,18 @@
 import React from 'react';
 import css from'./Game.module.css';
 import FieldGame from './FieldGame';
-import {time} from './logic';
+import {time, orientation} from './logic';
 
 export default class Game extends React.Component {
     constructor(props) {
         super(props);
         this.tick = this.tick.bind(this);
+        this.keyPress = this.keyPress.bind(this);
         this.state =  {
             tact: 0
-        }
+        };
+        this.contain = React.createRef();
+
     }
 
     componentDidMount() {
@@ -17,6 +20,7 @@ export default class Game extends React.Component {
             () => this.tick(),
             100
         );
+        this.contain.current.focus();
     }
 
     tick() {
@@ -26,9 +30,16 @@ export default class Game extends React.Component {
         this.setState({tact: tact})
     }
 
+    keyPress() {
+        debugger
+    }
+
     render() {
         return(
-            <div className={css.bg}>
+            <div tabIndex="0"
+                 onKeyDown={(e) =>{ orientation(e.key)}}
+                 className={css.bg}
+                 ref={this.contain}>
                 <div className={css.container}>
                     <div className={css.score}/>
                     <span className={css.span}>1000</span>

@@ -1,4 +1,6 @@
 .container{
+    background: url('../images/grass3.jpg') ;
+    background-size: cover;
     margin-top: 4vh ;
     margin-left: 15vw;
     width: max-content;

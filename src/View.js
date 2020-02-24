@@ -6,7 +6,7 @@ import Game from "./Game/Game";
 function View(props) {
 
   return (
-      <Switch>
+      <Switch >
           <Route exact path='/menu' component={Menu} />
           <Route path='/game' render={() => <Game {...props} />}  />
           <Route path='/chooseSnake' component={ChooseSnake} />

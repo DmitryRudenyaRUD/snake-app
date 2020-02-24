@@ -37,7 +37,26 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="ts.external.directory.path" value="D:\WebStorm 2019.2.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+  </component>
+  <component name="RunManager">
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.start" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -54,6 +73,9 @@
       <workItem from="1582187635911" duration="12169000" />
       <workItem from="1582202035370" duration="1985000" />
       <workItem from="1582212242088" duration="7651000" />
+      <workItem from="1582273432920" duration="7422000" />
+      <workItem from="1582291863491" duration="10039000" />
+      <workItem from="1582539958440" duration="19333000" />
     </task>
     <servers />
   </component>
@@ -65,10 +87,26 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="350" y="57" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1582106213590" />
-    <state x="413" y="67" key="FileChooserDialogImpl" timestamp="1582215628187">
+    <state x="413" y="67" key="FileChooserDialogImpl" timestamp="1582295238347">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="67" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1582215628187" />
+    <state x="413" y="67" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1582295238347" />
+    <state width="1339" height="161" key="GridCell.Tab.0.bottom" timestamp="1582565011204">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1339" height="161" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1582565011204" />
+    <state width="1339" height="161" key="GridCell.Tab.0.center" timestamp="1582565011204">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1339" height="161" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1582565011204" />
+    <state width="1339" height="161" key="GridCell.Tab.0.left" timestamp="1582565011204">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1339" height="161" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1582565011204" />
+    <state width="1339" height="161" key="GridCell.Tab.0.right" timestamp="1582565011204">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1339" height="161" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1582565011204" />
     <state x="458" y="267" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1582124731663">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

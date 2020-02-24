@@ -1,14 +1,44 @@
 .snake {
-    background: url('../images/s2.jpg') ;
-    background-size: cover;
+    background: url('../images/s2.jpg') no-repeat ;
+    background-size: 250%;
     width: 100%;
     height: 100%;
-    font-size: 25px;
 }
 .m {
-    background: url('../images/m.png') no-repeat center center fixed;
+    background: url('../images/m4.gif') no-repeat center center;
     background-size: cover;
-    width: 100%;
-    height: 100%;
-    font-size: 25px;
+    width: 170%;
+    height: 140%;
+}
+.headRight{
+    background: url('../images/h2.png');
+    background-size: cover;
+    width: 200%;
+    height: 140%;
+    margin-top: -1vh;
+}
+.headLeft{
+    background: url('../images/h2.png');
+    background-size: cover;
+    width: 200%;
+    height: 140%;
+    margin-top: -1vh;
+    margin-left: -4vh;
+    transform: scaleX(-1);
+}
+.headUp{
+    background: url('../images/h2.png');
+    background-size: cover;
+    width: 200%;
+    height: 140%;
+    margin-left: -2.5vh;
+    transform: rotate(270deg);
+}
+.headDown{
+    background: url('../images/h2.png');
+    background-size: cover;
+    width: 200%;
+    height: 140%;
+    margin-left: -2.5vh;
+    transform: rotate(90deg);
 }

@@ -6,10 +6,10 @@ export const store = {
         {x: 1, y: 6},
         {x: 2, y: 6},
     ],
-    _snakeHead: {x: 1, y: 15},
-    _mouse__1: {x: 9, y: 15},
-    _mouse__2: {x: 5, y: 15},
-    _mouse__3: {x: 7, y: 15},
+    _snakeHead: {x: 3, y: 6},
+    _orientation: 'ArrowRight',
+    _mouse__1: {x: 0, y: 0},
+    _mouse__2: {x: 0, y: 1},
     _time:'0:00:00',
 
     get fieldSize() {
@@ -30,11 +30,21 @@ export const store = {
     get mouse__2() {
         return this._mouse__2
     },
-    get time () {
+    get time() {
         return this._time
+    },
+    get orientation(){
+        return this._orientation
     },
 
     set recordTime(value) {
         this._time = value;
+    },
+    set locationSnake(value) {
+        this._snakeSegments = value[0];
+        this._snakeHead = value[1];
+    },
+    set recordOrientation(props) {
+        this._orientation = props
     }
 };
