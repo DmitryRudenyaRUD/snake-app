@@ -18,15 +18,19 @@ export default class Game extends React.Component {
     componentDidMount() {
         this.timerID = setInterval(
             () => this.tick(),
-            100
+            50
         );
         this.contain.current.focus();
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.timerID);
     }
 
     tick() {
         let tact = this.state.tact;
         time(this.props.renderFunc, tact);
-        tact = tact === 9 ? 0 : ++tact;
+        tact = tact === 19 ? 0 : ++tact;
         this.setState({tact: tact})
     }
 
@@ -42,7 +46,7 @@ export default class Game extends React.Component {
                  ref={this.contain}>
                 <div className={css.container}>
                     <div className={css.score}/>
-                    <span className={css.span}>1000</span>
+                    <span className={css.span}>{this.props.store.score}</span>
                     <div className={css.clock}/>
                     <span className={css.span}>{this.props.store.time}</span>
                 </div>

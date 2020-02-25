@@ -8,9 +8,13 @@ export const store = {
     ],
     _snakeHead: {x: 3, y: 6},
     _orientation: 'ArrowRight',
-    _mouse__1: {x: 0, y: 0},
-    _mouse__2: {x: 0, y: 1},
+    _mouse__1: {x: 9, y: 6},
+    _mouse__2: {x: 20, y: 10},
     _time:'0:00:00',
+    _model: '1',
+    _speed: 10,
+    _score: 0,
+    _blood: {x: 1, y: 1},
 
     get fieldSize() {
         return this._fieldSize
@@ -36,6 +40,15 @@ export const store = {
     get orientation(){
         return this._orientation
     },
+    get model() {
+        return this._model
+    },
+    get speed() {
+        return this._speed
+    },
+    get score() {
+        return this._score
+    },
 
     set recordTime(value) {
         this._time = value;
@@ -46,5 +59,19 @@ export const store = {
     },
     set recordOrientation(props) {
         this._orientation = props
+    },
+    set chooseModel(value) {
+        this._model = value;
+    },
+    set recordSpeed(value) {
+        this._speed = value < 4 ? 10 :
+            value < 6 ? 5 :
+                value < 8 ? 4 :
+                    value < 10 ? 3 :
+                        value < 12 ? 2 : 1
+
+    },
+    set recordScore(value) {
+        this._score += value;
     }
 };

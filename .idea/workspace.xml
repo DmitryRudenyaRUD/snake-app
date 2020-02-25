@@ -76,6 +76,10 @@
       <workItem from="1582273432920" duration="7422000" />
       <workItem from="1582291863491" duration="10039000" />
       <workItem from="1582539958440" duration="19333000" />
+      <workItem from="1582569694806" duration="8744000" />
+      <workItem from="1582579159700" duration="2873000" />
+      <workItem from="1582626977334" duration="13669000" />
+      <workItem from="1582652296329" duration="8532000" />
     </task>
     <servers />
   </component>
@@ -87,10 +91,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="350" y="57" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1582106213590" />
-    <state x="413" y="67" key="FileChooserDialogImpl" timestamp="1582295238347">
+    <state x="413" y="67" key="FileChooserDialogImpl" timestamp="1582638850489">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="67" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1582295238347" />
+    <state x="413" y="67" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1582638850489" />
     <state width="1339" height="161" key="GridCell.Tab.0.bottom" timestamp="1582565011204">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -111,6 +115,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="458" y="267" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1582124731663" />
+    <state width="375" height="70" key="javadoc.popup.new" timestamp="1582666118535">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="375" height="70" key="javadoc.popup.new/0.0.1366.728@0.0.1366.728" timestamp="1582666118535" />
     <state x="262" y="-1" width="840" height="1034" key="search.everywhere.popup" timestamp="1582190479852">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

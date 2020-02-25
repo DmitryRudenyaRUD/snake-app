@@ -1,33 +1,63 @@
 import React from 'react';
 import css from './Menu.module.css';
-import {NavLink} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
-export function Menu(props) {
+export function Menu() {
 
     return (
         <div className={css.container}>
-            <NavLink
+            <Link
                 to='/game'
                 className={css.nav}
-            >START</NavLink>
-            <NavLink
+            >START</Link>
+            <Link
                 to='/chooseSnake'
                 className={css.nav}
-            >Choose Snake</NavLink>
-            <NavLink
+            >Choose Snake</Link>
+            <Link
                 to='/highScore'
                 className={css.nav}
 
-            >High Score</NavLink>
+            >High Score</Link>
         </div>
     )
 }
 
-export function ChooseSnake() {
+export function ChooseSnake(props) {
+    function choice(e) {
+        props.store.chooseModel = e.target.dataset.num;
+        props.store.recordSpeed = e.target.dataset.num;
+    }
+
+    const fragments = [...new Array(12).keys()];
     return (
-        <h1>ChooseSnake</h1>
+        <div className={css.bg}>{
+            fragments.map((frag) => (
+                    <div
+                        key={frag}
+                        onClick={choice}
+                        className={css.icon}
+                        data-num={frag + 1}>
+                         <div className={css[`s${frag}`]} data-num={frag + 1}/>
+                         <div className={css.string} >SPEED</div>
+                         <div className={css.scale}>{scale(frag)}</div>
+                    </div>
+                )
+            )
+        }
+        </div>
     )
 }
+
+function scale(frag) {
+    const number = frag < 3 ? 1  :
+        frag < 5 ? 2 :
+            frag < 7 ? 3 :
+                frag < 10 ? 4 :
+                    frag < 11 ? 5 : 6;
+   return [...new Array(number).keys()].map(i => <div key={i} className={css.cell} />)
+}
+
 
 export function HighScore() {
     return (

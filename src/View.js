@@ -8,8 +8,8 @@ function View(props) {
   return (
       <Switch >
           <Route exact path='/menu' component={Menu} />
-          <Route path='/game' render={() => <Game {...props} />}  />
-          <Route path='/chooseSnake' component={ChooseSnake} />
+          <Route path='/game' render={() => <Game {...props} />} />
+          <Route path='/chooseSnake' render={() => <ChooseSnake {...props} />} />
           <Route path='/highScore' component={HighScore} />
           <Redirect from='/' to='/menu' />
       </Switch>
