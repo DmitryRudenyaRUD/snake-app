@@ -14,7 +14,7 @@ export const store = {
     _model: '1',
     _speed: 10,
     _score: 0,
-    _blood: {x: 1, y: 1},
+    _blood: {x: -1, y: -1},
 
     get fieldSize() {
         return this._fieldSize

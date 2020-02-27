@@ -6,6 +6,7 @@ import HeadSnake from './HeadSnake';
 import Blood from './Blood';
 
 
+
 export function handler(props) {
     const pos = props.position;
     const snake = props.store.snakeSegments;
@@ -110,14 +111,14 @@ function grow() {
 
 
     if(head.x === mouse__1.x && head.y === mouse__1.y) {
-        locationMouse('_mouse__1', array);
         blood(mouse__1);
+        locationMouse('_mouse__1', array);
         handleScore();
         return false
     }
     if(head.x === mouse__2.x && head.y === mouse__2.y) {
-        locationMouse('_mouse__2', array);
         blood(mouse__2);
+        locationMouse('_mouse__2', array);
         handleScore();
         return false
     }
@@ -140,11 +141,31 @@ function handleScore() {
 }
 
 function blood(m) {
-    const h = store.snakeHead;
+    let x = m.x;
+    let y = m.y;
+    let num = store.speed < 4 ? 3 : 2;
 
-    const x = m.x - h.x === 0  ? m.x : 2 * m.x - h.x ;
-    const y = m.y - h.y === 0  ? m.y : 2 * m.y - h.y ;
+    switch(store.orientation) {
+        case 'ArrowRight':
+            x += num;
+            break;
+        case 'ArrowLeft':
+            x -= num;
+            break;
+        case 'ArrowUp':
+            y -= num;
+            break;
+        case 'ArrowDown':
+            y += num;
+            break;
+        default:
+            return;
+    }
     store._blood = {x: x,  y: y};
-    setTimeout( () => store._blood = {x: 1,  y: 1}, 500)
+    setTimeout( () => store._blood = {x: -1,  y: -1}, 500)
 }
+
+
+
+
 

@@ -65,8 +65,8 @@
     height: 100%;
 }
 .snake12 {
-    background:url('../images/s12.jpg') no-repeat;
-    background-size: 250%;
+    background:url('../images/r.jpg') no-repeat;
+    background-size: 150%;
     width: 100%;
     height: 100%;
 }
@@ -162,8 +162,8 @@
 .headRight12{
     background: url('../images/h12.png');
     background-size: cover;
-    width: 200%;
-    height: 140%;
+    width: 250%;
+    height: 160%;
     margin-top: -1vh;
 }
 
@@ -271,8 +271,8 @@
 .headLeft12{
     background: url('../images/h12.png');
     background-size: cover;
-    width: 200%;
-    height: 140%;
+    width: 250%;
+    height: 160%;
     margin-top: -1vh;
     margin-left: -4vh;
     transform: scaleX(-1);
@@ -370,8 +370,8 @@
 .headUp12{
     background: url('../images/h12.png');
     background-size: cover;
-    width: 200%;
-    height: 140%;
+    width: 250%;
+    height: 160%;
     margin-left: -2.5vh;
     transform: rotate(270deg);
 }
@@ -469,8 +469,8 @@
 .headDown12{
     background: url('../images/h12.png');
     background-size: cover;
-    width: 200%;
-    height: 140%;
+    width: 250%;
+    height: 160%;
     margin-left: -2.5vh;
     transform: rotate(90deg);
 }
@@ -478,6 +478,6 @@
 .blood{
     background: url('../images/b3.png');
     background-size: cover;
-    width: 110%;
-    height: 120%;
+    width: 270%;
+    height: 270%;
 }

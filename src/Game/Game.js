@@ -2,14 +2,17 @@ import React from 'react';
 import css from'./Game.module.css';
 import FieldGame from './FieldGame';
 import {time, orientation} from './logic';
+import {store} from "../State";
+import Back from './Back';
 
 export default class Game extends React.Component {
     constructor(props) {
         super(props);
         this.tick = this.tick.bind(this);
-        this.keyPress = this.keyPress.bind(this);
+        this.isGameOver = this.isGameOver.bind(this);
         this.state =  {
-            tact: 0
+            tact: 0,
+            end:false
         };
         this.contain = React.createRef();
 
@@ -28,14 +31,36 @@ export default class Game extends React.Component {
     }
 
     tick() {
+        const render = this.props.renderFunc;
         let tact = this.state.tact;
-        time(this.props.renderFunc, tact);
+        this.isGameOver();
+
+        time(render, tact);
         tact = tact === 19 ? 0 : ++tact;
+
         this.setState({tact: tact})
     }
 
-    keyPress() {
-        debugger
+   isGameOver() {
+        const head = this.props.store.snakeHead;
+
+        for (let seg of this.props.store.snakeSegments) {
+            if(seg.x === head.x && seg.y === head.y) {
+                this.setState({end: true});
+                clearInterval(this.timerID);
+            }
+        }
+
+        if(head.x < 0 || head.x > store.fieldSize) {
+            this.setState({end: true});
+            clearInterval(this.timerID);
+        }
+
+        if(head.y < 0 || head.y > store.columnSize) {
+            this.setState({end: true});
+            clearInterval(this.timerID);
+        }
+
     }
 
     render() {
@@ -49,6 +74,7 @@ export default class Game extends React.Component {
                     <span className={css.span}>{this.props.store.score}</span>
                     <div className={css.clock}/>
                     <span className={css.span}>{this.props.store.time}</span>
+                    <Back end={this.state.end}/>
                 </div>
                 <FieldGame store={this.props.store}/>
             </div>

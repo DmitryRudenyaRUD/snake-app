@@ -169,8 +169,9 @@
     border-radius: 20px;
 }
 .s11{
-    background: url('../images/s12.jpg');
-    background-size: cover;
+    background: url('../images/h12.png') no-repeat;
+    background-size: 80%;
+    top: -22vh;
     height: 18vh;
     width: 20vw;
     border-radius: 20px;

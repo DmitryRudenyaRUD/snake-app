@@ -31,3 +31,12 @@
     margin-left: 3vw;
     border-radius: 1vw;
 }
+
+.exit {
+    background: url('../images/exit.png') no-repeat center center;
+    background-size: cover;
+    margin-left: 55vw;
+    margin-top: 5vh;
+    height: 8vh;
+    width: 8vw;
+}

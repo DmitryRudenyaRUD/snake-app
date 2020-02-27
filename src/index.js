@@ -8,7 +8,7 @@ import {store} from './State';
 function renderFunc() {
     ReactDOM.render((
         <BrowserRouter>
-            <View store={store} renderFunc={renderFunc}/>
+            <View store={store} renderFunc={renderFunc} />
         </BrowserRouter>
     ), document.getElementById('root'));
 }
