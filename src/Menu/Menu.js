@@ -60,16 +60,9 @@ function scale(frag) {
 
 
 export function HighScore(props) {
-    let list;
 
-    fetch('http://www.mocky.io/v2/5e5910f72f0000be0c96240e')
-    .then(response => {
-          if(response.status !== 200) {
-              return new Error(response.statusText)
-          }
-          return response
-      })
-    .then(response => response.json())
+    fetch('../../public/h')
+    .then(response => response.text())
     .then( data => console.log(data))
     .catch(error => console.log(error));
 

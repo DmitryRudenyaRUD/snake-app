@@ -30,6 +30,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JSON" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../timer-react" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -41,6 +42,11 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="ts.external.directory.path" value="D:\WebStorm 2019.2.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\Desktop\snake-app\public" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
@@ -84,7 +90,7 @@
       <workItem from="1582716891172" duration="10395000" />
       <workItem from="1582736491905" duration="1275000" />
       <workItem from="1582793558321" duration="16651000" />
-      <workItem from="1582881719103" duration="9172000" />
+      <workItem from="1582881719103" duration="19609000" />
     </task>
     <servers />
   </component>
@@ -120,13 +126,13 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="458" y="267" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1582124731663" />
-    <state width="375" height="70" key="javadoc.popup.new" timestamp="1582895083942">
+    <state width="375" height="70" key="javadoc.popup.new" timestamp="1582909312211">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="375" height="70" key="javadoc.popup.new/0.0.1366.728@0.0.1366.728" timestamp="1582895083942" />
-    <state x="262" y="-1" width="840" height="1034" key="search.everywhere.popup" timestamp="1582190479852">
+    <state width="375" height="70" key="javadoc.popup.new/0.0.1366.728@0.0.1366.728" timestamp="1582909312211" />
+    <state x="262" y="0" width="840" height="726" key="search.everywhere.popup" timestamp="1582897776497">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="262" y="-1" width="840" height="1034" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1582190479852" />
+    <state x="262" y="0" width="840" height="726" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1582897776497" />
   </component>
 </project>

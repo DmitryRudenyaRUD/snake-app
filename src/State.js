@@ -12,13 +12,16 @@ export const store = {
     _mouse__2: {x: 20, y: 10},
     _time:'0:00:00',
     _model: '4',
-    _speed: 10,
+    _speed: 5,
     _score: 0,
     _blood: {x: -1, y: -1},
     _highScore: [
         {'ReyMisteryo': 2050},
         {'$$$PaVel$$$': 1020},
         {'.....TUZ.....': 999},
+        {"snoopDOG": 102},
+        {"morg123": 20},
+        {"FUCKAPP": 1}
      ],
 
     get fieldSize() {

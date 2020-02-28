@@ -10,6 +10,8 @@ export default function End () {
 
 
     function handleClick(e) {
+        input.current.classList.remove(css.error);
+
         let value = e.target.value;
         let reg = value.match(/[a-zA-Z0-9]{0,10}/);
         setText(reg);
@@ -25,9 +27,6 @@ export default function End () {
         store.recordHighScore = text;
         history.push('/highScore');
     }
-
-
-
 
     return (
         <div className={css.bgEnd}>
