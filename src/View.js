@@ -11,7 +11,7 @@ function View(props) {
           <Route exact path='/menu' component={Menu} />
           <Route path='/game' render={() => <Game {...props}  />} />
           <Route path='/chooseSnake' render={() => <ChooseSnake {...props} />} />
-          <Route path='/highScore' component={HighScore} />
+          <Route path='/highScore' render={() => <HighScore {...props} />} />
           <Route path='/end' component={End} />
           <Redirect from='/' to='/menu' />
       </Switch>

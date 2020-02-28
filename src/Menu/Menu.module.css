@@ -31,7 +31,7 @@
     box-shadow: 4px 4px 8px black, 0 0 3em #226323;
 }
 .bg {
-    background-color: rgba(29, 29, 29, 0.95);
+    background-color: rgba(0, 0, 0, 0.93);
     height: 100vh;
     width: 100vw;
     display: grid;
@@ -200,4 +200,38 @@
     width:12%;
     height: 80%;
     background-color: forestgreen;
+}
+.bgHS{
+    background-color: black;
+    height: 100vh;
+    overflow-y: scroll;
+}
+.banner{
+    background: url('../images/high.jpg') no-repeat;
+    background-size: cover;
+    margin-left: 15vw;
+    margin-bottom: 10vh;
+    width:70vw;
+    height: 35vh;
+}
+.li{
+    color:white;
+    margin-left: 25vw;
+    margin-top: 3vh;
+    padding-left: 2vw;
+    width:45vw;
+    height: 6vh;
+    font: bold 5vh/7vh Helvetica;
+    list-style-type: none;
+    border-width: 5px;
+    border-style: double;
+    border-color: #aca881;
+    border-radius: 10px;
+
+}
+
+.score{
+    float: right;
+    margin-right: 3vw;
+    color: #b40000;
 }

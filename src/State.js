@@ -11,10 +11,15 @@ export const store = {
     _mouse__1: {x: 9, y: 6},
     _mouse__2: {x: 20, y: 10},
     _time:'0:00:00',
-    _model: '1',
+    _model: '4',
     _speed: 10,
     _score: 0,
     _blood: {x: -1, y: -1},
+    _highScore: [
+        {'ReyMisteryo': 2050},
+        {'$$$PaVel$$$': 1020},
+        {'.....TUZ.....': 999},
+     ],
 
     get fieldSize() {
         return this._fieldSize
@@ -49,6 +54,9 @@ export const store = {
     get score() {
         return this._score
     },
+    get highScore() {
+        return this._highScore
+    },
 
     set recordTime(value) {
         this._time = value;
@@ -73,5 +81,13 @@ export const store = {
     },
     set recordScore(value) {
         this._score += value;
-    }
+    },
+    set recordHighScore(value) {
+        console.log(value);
+        let newPerson = {[value]: this.score};
+        this._highScore.push(newPerson);
+        this._highScore.sort(
+            (a, b) => 1 / a[Object.keys(a)] - 1 / b[Object.keys(b)]
+        )
+    },
 };

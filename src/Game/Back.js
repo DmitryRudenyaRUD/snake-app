@@ -5,13 +5,17 @@ import css from './Game.module.css';
 export default function Back(props) {
     let history = useHistory();
 
-    if(props.end) setTimeout(() => handleClick('/end'),1000);
+    if(props.end) setTimeout(() => handleClick('/end'),600);
 
-    function handleClick(str = '/menu') {
+    function handleClick(str) {
         history.push(str);
+
+        if(str === '/') {
+            window.location.reload(false)
+        }
     }
 
     return (
-        <div onClick={handleClick} className={css.exit}/>
+        <div onClick={() => handleClick('/')} className={css.exit}/>
     );
 }

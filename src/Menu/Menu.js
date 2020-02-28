@@ -59,8 +59,36 @@ function scale(frag) {
 }
 
 
-export function HighScore() {
+export function HighScore(props) {
+    let list;
+
+    fetch('http://www.mocky.io/v2/5e5910f72f0000be0c96240e')
+    .then(response => {
+          if(response.status !== 200) {
+              return new Error(response.statusText)
+          }
+          return response
+      })
+    .then(response => response.json())
+    .then( data => console.log(data))
+    .catch(error => console.log(error));
+
     return (
-        <h1>HighScore</h1>
+        <div className={css.bgHS}>
+            <div className={css.banner}/>
+            <ul>{
+                props.store.highScore.map((item, ind) => (
+                    <li
+                        key={ind}
+                        className={css.li}>{
+                            <>
+                            <span>{`${ind + 1}. `}</span>
+                            <span>{Object.keys(item)}</span>
+                            <span className={css.score}>{item[Object.keys(item)]}</span>
+                            </>
+                    }</li>
+                ))
+            }</ul>
+        </div>
     )
 }
