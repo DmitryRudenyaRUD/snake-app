@@ -33,7 +33,7 @@
 }
 
 .exit {
-    background: url('../images/exit.png') no-repeat center center;
+    background: url('../images/exit.jpg') no-repeat center center;
     background-size: cover;
     margin-left: 55vw;
     margin-top: 5vh;
@@ -69,4 +69,50 @@
 }
 .error{
     background: rgba(255, 0, 0, 0.94);
+}
+
+.tooltip {
+    padding: 2vh;
+    height: 6vh;
+    width: 18vw;
+    position: absolute;
+    top: 35vh;
+    right: 6vw;
+    border: 1px solid #bdb76b;
+    background-color: darkkhaki;
+    border-radius: 20px;
+    color: white;
+    font: bold 2vh/3vh Helvetica;
+    box-shadow: 5px 0px 0px #373740, 0 0 1em #ffb900;
+}
+.bubble1{
+    height: 6vh;
+    width: 6vh;
+    position: absolute;
+    border: 1px solid #bdb76b;
+    background-color: darkkhaki;
+    border-radius: 100%;
+    top: 45vh;
+    right: 25vw;
+}
+.bubble2{
+    height: 4.5vh;
+    width: 4.5vh;
+    position: absolute;
+    border: 1px solid #bdb76b;
+    background-color: darkkhaki;
+    border-radius: 100%;
+    top: 52vh;
+    right: 27vw;
+}
+
+.bubble3{
+    height: 3vh;
+    width: 3vh;
+    position: absolute;
+    border: 1px solid #bdb76b;
+    background-color: darkkhaki;
+    border-radius: 100%;
+    top: 58vh;
+    right: 29vw;
 }

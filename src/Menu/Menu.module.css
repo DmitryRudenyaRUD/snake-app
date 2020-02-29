@@ -235,3 +235,13 @@
     margin-right: 3vw;
     color: #b40000;
 }
+
+.exit{
+    background: url('../images/exit.jpg') no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    top: 5vh;
+    right: 4vw;
+    height: 8vh;
+    width: 8vw;
+}

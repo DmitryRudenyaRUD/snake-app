@@ -1,7 +1,7 @@
 import React from 'react';
 import css from'./Game.module.css';
-import FieldGame from './FieldGame';
-import {time, orientation} from './logic';
+import FieldGame from './stage/FieldGame';
+import {time, orientation} from '../logic';
 import {store} from "../State";
 import Back from './Back';
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import css from './Menu.module.css';
-import {Link} from 'react-router-dom';
+import {Link, useHistory} from 'react-router-dom';
 
 export function Menu() {
 
@@ -58,17 +58,29 @@ function scale(frag) {
    return [...new Array(number).keys()].map(i => <div key={i} className={css.cell} />)
 }
 
-
 export function HighScore(props) {
+    let history = useHistory();
 
-    fetch('../../public/h')
+    function handleClick() {
+        history.push('/');
+        window.location.reload(false)
+    }
+
+    fetch('../json/h.json')
+    .then(response => {console.log(response);
+        if (response.status !== 200) {
+            return Promise.reject(new Error(response.statusText))
+        }
+        return Promise.resolve(response)
+    })
     .then(response => response.text())
     .then( data => console.log(data))
     .catch(error => console.log(error));
 
     return (
-        <div className={css.bgHS}>
+        <div className={css.bgHS} onClick={handleClick}>
             <div className={css.banner}/>
+            <div className={css.exit} />
             <ul>{
                 props.store.highScore.map((item, ind) => (
                     <li

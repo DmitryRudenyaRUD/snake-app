@@ -1,9 +1,9 @@
 import React from 'react';
-import {store} from '../State'
-import Mouse from "./Mouse";
-import Snake from './Snake';
-import HeadSnake from './HeadSnake';
-import Blood from './Blood';
+import {store} from './State'
+import Mouse from "./Game/subjects/Mouse";
+import Snake from './Game/subjects/Snake';
+import HeadSnake from './Game/subjects/HeadSnake';
+import Blood from './Game/subjects/Blood';
 
 
 

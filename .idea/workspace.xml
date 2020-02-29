@@ -11,14 +11,14 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="TypeScript File" />
-        <option value="CSS File" />
-        <option value="JavaScript File" />
         <option value="package.json" />
+        <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1Y1Mkn8QjQTUzdKUdPaOndTCjkI" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -31,7 +31,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JSON" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../timer-react" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -45,7 +45,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Admin\Desktop\snake-app\public" />
+      <recent name="C:\Users\Admin\Desktop\snake-app\src" />
+      <recent name="C:\Users\Admin\Desktop\snake-app\src\" />
+      <recent name="C:\Users\Admin\Desktop\snake-app\src\Game\stage" />
+      <recent name="C:\Users\Admin\Desktop\snake-app\src\Game\subjects" />
+      <recent name="C:\Users\Admin\Desktop\snake-app\src\Game\articles" />
     </key>
   </component>
   <component name="RunManager">
@@ -90,7 +94,9 @@
       <workItem from="1582716891172" duration="10395000" />
       <workItem from="1582736491905" duration="1275000" />
       <workItem from="1582793558321" duration="16651000" />
-      <workItem from="1582881719103" duration="19609000" />
+      <workItem from="1582881719103" duration="19718000" />
+      <workItem from="1582959071210" duration="6032000" />
+      <workItem from="1582974855997" duration="13922000" />
     </task>
     <servers />
   </component>
@@ -102,10 +108,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="350" y="57" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1582106213590" />
-    <state x="413" y="67" key="FileChooserDialogImpl" timestamp="1582638850489">
+    <state x="413" y="67" key="FileChooserDialogImpl" timestamp="1582965200096">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="67" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1582638850489" />
+    <state x="413" y="67" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1582965200096" />
     <state width="1339" height="161" key="GridCell.Tab.0.bottom" timestamp="1582565011204">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -126,10 +132,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="458" y="267" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1582124731663" />
-    <state width="375" height="70" key="javadoc.popup.new" timestamp="1582909312211">
+    <state width="375" height="70" key="javadoc.popup.new" timestamp="1582964355076">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="375" height="70" key="javadoc.popup.new/0.0.1366.728@0.0.1366.728" timestamp="1582909312211" />
+    <state width="375" height="70" key="javadoc.popup.new/0.0.1366.728@0.0.1366.728" timestamp="1582964355076" />
     <state x="262" y="0" width="840" height="726" key="search.everywhere.popup" timestamp="1582897776497">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
