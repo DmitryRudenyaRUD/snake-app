@@ -38,6 +38,7 @@ export function handler(props) {
     }
 }
 
+
 export function time(renderFunc, tact) {
 
     let [h, m, s] = store.time.split(':').map((item) => parseInt(item));
@@ -56,6 +57,7 @@ export function time(renderFunc, tact) {
     }
 }
 
+
 export function orientation(k) {
     if(k === 'ArrowUp' && store.orientation !== 'ArrowDown') {
         store.recordOrientation = k
@@ -70,6 +72,7 @@ export function orientation(k) {
         store.recordOrientation = k
     }
 }
+
 
 function movementSnake(tact, renderFunc) {
     let head = store.snakeHead;
@@ -101,6 +104,7 @@ function movementSnake(tact, renderFunc) {
     }
 }
 
+
 function grow() {
     const head = store.snakeHead;
     const mouse__1 = store.mouse__1;
@@ -111,19 +115,20 @@ function grow() {
 
 
     if(head.x === mouse__1.x && head.y === mouse__1.y) {
-        blood(mouse__1);
+        blood(mouse__1, store.orientation);
         locationMouse('_mouse__1', array);
         handleScore();
         return false
     }
     if(head.x === mouse__2.x && head.y === mouse__2.y) {
-        blood(mouse__2);
+        blood(mouse__2, store.orientation);
         locationMouse('_mouse__2', array);
         handleScore();
         return false
     }
     return true;
 }
+
 
 function locationMouse(value, array) {
     const x = Math.floor(1 + Math.random() * (store.fieldSize - 1));
@@ -136,16 +141,18 @@ function locationMouse(value, array) {
     store[value].y = y;
 }
 
+
 function handleScore() {
     store.recordScore = Math.ceil(10 / store.speed)
 }
 
-function blood(m) {
+
+function blood(m, orientation) {
     let x = m.x;
     let y = m.y;
     let num = store.speed < 4 ? 3 : 2;
 
-    switch(store.orientation) {
+    switch(orientation) {
         case 'ArrowRight':
             x += num;
             break;

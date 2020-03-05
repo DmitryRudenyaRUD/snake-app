@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import css from './Game.module.css';
 import {useHistory} from "react-router-dom";
-import {store} from '../State';
+import {store} from '../../State';
 import Tooltip from './Tooltip';
 
 export default function End () {
@@ -15,7 +15,7 @@ export default function End () {
         input.current.classList.remove(css.error);
 
         let value = e.target.value;
-        let reg = value.match(/[a-zA-Z0-9]{0,10}/);
+        let reg = value.match(/[a-zA-Z0-9]{0,7}/);
         setText(reg);
     }
 
@@ -27,7 +27,14 @@ export default function End () {
             setTooltip(true);
             return;
         }
-        store.recordHighScore = text;
+        fetch(' http://www.mocky.io/v2/5e5fe9c1330000800097b6f3',{
+            method: 'POST',
+            body: JSON.stringify({[text]: store.score})
+        })
+        .then(data => console.log(JSON.stringify({[text]: store.score})));
+
+        localStorage.setItem([text], store.score);
+
         history.push('/highScore');
     }
 
@@ -37,6 +44,7 @@ export default function End () {
             <Tooltip bool={tooltip} />
             <form onSubmit={(e) => submit(e)}>
                 <input
+                    autoFocus={true}
                     ref={input}
                     onChange={(e) => handleClick(e)}
                     type='text'

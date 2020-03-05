@@ -1,9 +1,8 @@
-import React from 'react';
+import React, {useState} from 'react';
 import css from './Menu.module.css';
 import {Link, useHistory} from 'react-router-dom';
 
 export function Menu() {
-
     return (
         <div className={css.container}>
             <Link
@@ -24,9 +23,12 @@ export function Menu() {
 }
 
 export function ChooseSnake(props) {
+    let history = useHistory();
+
     function choice(e) {
         props.store.chooseModel = e.target.dataset.num;
         props.store.recordSpeed = e.target.dataset.num;
+        history.push('/game');
     }
 
     const fragments = [...new Array(12).keys()];
@@ -58,31 +60,51 @@ function scale(frag) {
    return [...new Array(number).keys()].map(i => <div key={i} className={css.cell} />)
 }
 
-export function HighScore(props) {
+
+export function HighScore() {
     let history = useHistory();
+    const [fetching = [], changeState] = useState();
 
-    function handleClick() {
+    const handleClick = (() => {
         history.push('/');
-        window.location.reload(false)
-    }
+        window.location.reload(false);
+    });
 
-    fetch('../json/h.json')
-    .then(response => {console.log(response);
-        if (response.status !== 200) {
-            return Promise.reject(new Error(response.statusText))
+    const results = ((fetching) => {
+        let array = [...fetching];
+        for(let i = 0; i < localStorage.length; i++) {
+            let key = localStorage.key(i);
+            array.push({ [key]: localStorage.getItem(key) })
         }
-        return Promise.resolve(response)
-    })
-    .then(response => response.text())
-    .then( data => console.log(data))
-    .catch(error => console.log(error));
+
+        return array.sort(
+            (a, b) => 1 / a[Object.keys(a)] - 1 / b[Object.keys(b)]
+        )
+    });
+
+
+    if(fetching.length < 2) {
+        fetch(' http://www.mocky.io/v2/5e5fe9c1330000800097b6f3?mocky-delay=1000ms',)
+        .then(response => {
+            if(response.status !== 200) {
+                return Promise.reject(new Error(response.statusText))
+            }
+            return Promise.resolve(response)
+        })
+        .then(response => response.json())
+        .then(data => changeState(data))
+        .catch(error => {
+            console.log(error);
+            changeState([{'no result': 'the server is not responding'}])
+        })
+    }
 
     return (
         <div className={css.bgHS} onClick={handleClick}>
             <div className={css.banner}/>
             <div className={css.exit} />
             <ul>{
-                props.store.highScore.map((item, ind) => (
+                ( results(fetching) ).map((item, ind) => (
                     <li
                         key={ind}
                         className={css.li}>{

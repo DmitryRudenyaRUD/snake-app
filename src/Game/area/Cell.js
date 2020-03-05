@@ -1,6 +1,6 @@
 import React from 'react';
 import css from './Cell.module.css';
-import {handler} from '../../logic';
+import {handler} from '../../Reducer';
 
 
 export default function Cell(props) {

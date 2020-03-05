@@ -1,8 +1,8 @@
 import React from 'react';
-import css from'./Game.module.css';
-import FieldGame from './stage/FieldGame';
-import {time, orientation} from '../logic';
-import {store} from "../State";
+import css from './Game.module.css';
+import FieldGame from '../area/FieldGame';
+import {time, orientation} from '../../Reducer';
+import {store} from "../../State";
 import Back from './Back';
 
 export default class Game extends React.Component {

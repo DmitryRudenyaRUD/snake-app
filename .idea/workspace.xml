@@ -12,13 +12,13 @@
       <list>
         <option value="TypeScript File" />
         <option value="package.json" />
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1Y1Mkn8QjQTUzdKUdPaOndTCjkI" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -45,11 +45,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\Desktop\snake-app\src\Game\stages" />
+      <recent name="C:\Users\Admin\Desktop\snake-app\src\stages" />
+      <recent name="C:\Users\Admin\Desktop\snake-app\public" />
       <recent name="C:\Users\Admin\Desktop\snake-app\src" />
       <recent name="C:\Users\Admin\Desktop\snake-app\src\" />
-      <recent name="C:\Users\Admin\Desktop\snake-app\src\Game\stage" />
-      <recent name="C:\Users\Admin\Desktop\snake-app\src\Game\subjects" />
-      <recent name="C:\Users\Admin\Desktop\snake-app\src\Game\articles" />
     </key>
   </component>
   <component name="RunManager">
@@ -97,6 +97,16 @@
       <workItem from="1582881719103" duration="19718000" />
       <workItem from="1582959071210" duration="6032000" />
       <workItem from="1582974855997" duration="13922000" />
+      <workItem from="1583063375239" duration="2140000" />
+      <workItem from="1583096591385" duration="861000" />
+      <workItem from="1583138559679" duration="7479000" />
+      <workItem from="1583168450915" duration="1732000" />
+      <workItem from="1583256407791" duration="5252000" />
+      <workItem from="1583319839676" duration="5213000" />
+      <workItem from="1583330317362" duration="1665000" />
+      <workItem from="1583342475578" duration="12865000" />
+      <workItem from="1583399135292" duration="1921000" />
+      <workItem from="1583401137472" duration="3852000" />
     </task>
     <servers />
   </component>
@@ -104,38 +114,38 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="350" y="57" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1582106213590">
+    <state x="350" y="57" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1583143604326">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="350" y="57" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1582106213590" />
-    <state x="413" y="67" key="FileChooserDialogImpl" timestamp="1582965200096">
+    <state x="350" y="57" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1583143604326" />
+    <state x="413" y="67" key="FileChooserDialogImpl" timestamp="1583173231609">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="67" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1582965200096" />
-    <state width="1339" height="161" key="GridCell.Tab.0.bottom" timestamp="1582565011204">
+    <state x="413" y="67" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1583173231609" />
+    <state width="1339" height="161" key="GridCell.Tab.0.bottom" timestamp="1583063459569">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1339" height="161" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1582565011204" />
-    <state width="1339" height="161" key="GridCell.Tab.0.center" timestamp="1582565011204">
+    <state width="1339" height="161" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1583063459569" />
+    <state width="1339" height="161" key="GridCell.Tab.0.center" timestamp="1583063459569">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1339" height="161" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1582565011204" />
-    <state width="1339" height="161" key="GridCell.Tab.0.left" timestamp="1582565011204">
+    <state width="1339" height="161" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1583063459569" />
+    <state width="1339" height="161" key="GridCell.Tab.0.left" timestamp="1583063459568">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1339" height="161" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1582565011204" />
-    <state width="1339" height="161" key="GridCell.Tab.0.right" timestamp="1582565011204">
+    <state width="1339" height="161" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1583063459568" />
+    <state width="1339" height="161" key="GridCell.Tab.0.right" timestamp="1583063459569">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1339" height="161" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1582565011204" />
+    <state width="1339" height="161" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1583063459569" />
     <state x="458" y="267" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1582124731663">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="458" y="267" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1582124731663" />
-    <state width="375" height="70" key="javadoc.popup.new" timestamp="1582964355076">
+    <state width="375" height="70" key="javadoc.popup.new" timestamp="1583404888633">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="375" height="70" key="javadoc.popup.new/0.0.1366.728@0.0.1366.728" timestamp="1582964355076" />
+    <state width="375" height="70" key="javadoc.popup.new/0.0.1366.728@0.0.1366.728" timestamp="1583404888633" />
     <state x="262" y="0" width="840" height="726" key="search.everywhere.popup" timestamp="1582897776497">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
