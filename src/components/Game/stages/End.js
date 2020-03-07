@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import css from './Game.module.css';
 import {useHistory} from "react-router-dom";
-import {store} from '../../State';
+import {store} from '../../../store/State';
 import Tooltip from './Tooltip';
 
 export default function End () {
@@ -9,7 +9,6 @@ export default function End () {
     const [tooltip, setTooltip] = useState(false);
     let history = useHistory();
     const input = React.createRef();
-
 
     function handleClick(e) {
         input.current.classList.remove(css.error);
@@ -27,11 +26,11 @@ export default function End () {
             setTooltip(true);
             return;
         }
-        fetch(' http://www.mocky.io/v2/5e5fe9c1330000800097b6f3',{
+        fetch('http://www.mocky.io/v2/5e5fe9c1330000800097b6f3',{
             method: 'POST',
             body: JSON.stringify({[text]: store.score})
         })
-        .then(data => console.log(JSON.stringify({[text]: store.score})));
+        .then(data => console.log(JSON.stringify({[text]: store.score}), data));
 
         localStorage.setItem([text], store.score);
 

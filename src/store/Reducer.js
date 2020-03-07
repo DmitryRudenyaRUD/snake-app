@@ -1,11 +1,9 @@
 import React from 'react';
 import {store} from './State'
-import Mouse from "./Game/subjects/Mouse";
-import Snake from './Game/subjects/Snake';
-import HeadSnake from './Game/subjects/HeadSnake';
-import Blood from './Game/subjects/Blood';
-
-
+import Mouse from "../components/Game/objects/Mouse";
+import Snake from '../components/Game/objects/Snake';
+import HeadSnake from '../components/Game/objects/HeadSnake';
+import Blood from '../components/Game/objects/Blood';
 
 export function handler(props) {
     const pos = props.position;
@@ -14,7 +12,6 @@ export function handler(props) {
     const mouse__1 = props.store.mouse__1;
     const mouse__2 = props.store.mouse__2;
     const blood = props.store._blood;
-
 
     for (let seg of snake) {
         if(seg.x === pos.x && seg.y === pos.y) {
@@ -31,13 +28,12 @@ export function handler(props) {
             return <Mouse/>;
         case `${mouse__2.x} ${mouse__2.y}`:
             return <Mouse/>;
-            case `${blood.x} ${blood.y}`:
-                return <Blood/>;
+        case `${blood.x} ${blood.y}`:
+            return <Blood/>;
         default:
             return;
     }
 }
-
 
 export function time(renderFunc, tact) {
 
@@ -113,7 +109,6 @@ function grow() {
 
     const array = [head, mouse__1, mouse__2, ...snake];
 
-
     if(head.x === mouse__1.x && head.y === mouse__1.y) {
         blood(mouse__1, store.orientation);
         locationMouse('_mouse__1', array);
@@ -141,11 +136,9 @@ function locationMouse(value, array) {
     store[value].y = y;
 }
 
-
 function handleScore() {
     store.recordScore = Math.ceil(10 / store.speed)
 }
-
 
 function blood(m, orientation) {
     let x = m.x;

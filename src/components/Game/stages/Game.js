@@ -1,8 +1,8 @@
 import React from 'react';
 import css from './Game.module.css';
 import FieldGame from '../area/FieldGame';
-import {time, orientation} from '../../Reducer';
-import {store} from "../../State";
+import {time, orientation} from '../../../store/Reducer';
+import {store} from "../../../store/State";
 import Back from './Back';
 
 export default class Game extends React.Component {
@@ -15,7 +15,6 @@ export default class Game extends React.Component {
             end:false
         };
         this.contain = React.createRef();
-
     }
 
     componentDidMount() {

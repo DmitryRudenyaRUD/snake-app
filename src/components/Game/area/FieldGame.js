@@ -2,7 +2,6 @@ import React from 'react';
 import css from './FieldGame.module.css';
 import Cell from './Cell';
 
-
 export default class FieldGame extends React.Component {
 
     render() {
