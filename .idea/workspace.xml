@@ -42,18 +42,19 @@
     <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/react-scripts" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="watcher.settings" />
     <property name="ts.external.directory.path" value="D:\WebStorm 2019.2.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\Desktop\snake-app\src\components\Game\area" />
       <recent name="C:\Users\Admin\Desktop\snake-app\src\store" />
       <recent name="C:\Users\Admin\Desktop\snake-app\src\components" />
       <recent name="C:\Users\Admin\Desktop\snake-app\src\Game\stages" />
       <recent name="C:\Users\Admin\Desktop\snake-app\src\stages" />
-      <recent name="C:\Users\Admin\Desktop\snake-app\public" />
     </key>
   </component>
-  <component name="RunManager" selected="Jest.renders learn react link">
+  <component name="RunManager" selected="npm.start">
     <configuration name="renders learn react link" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -126,6 +127,17 @@
       <workItem from="1583486807626" duration="380000" />
       <workItem from="1583502469350" duration="945000" />
       <workItem from="1583574722611" duration="327000" />
+      <workItem from="1583666057236" duration="2642000" />
+      <workItem from="1583670494469" duration="61000" />
+      <workItem from="1583687212945" duration="599000" />
+      <workItem from="1583689057351" duration="1760000" />
+      <workItem from="1583690893293" duration="636000" />
+      <workItem from="1583705268421" duration="517000" />
+      <workItem from="1583742569766" duration="1069000" />
+      <workItem from="1583744330231" duration="1766000" />
+      <workItem from="1583746137529" duration="1334000" />
+      <workItem from="1583748086732" duration="1773000" />
+      <workItem from="1583749902819" duration="948000" />
     </task>
     <servers />
   </component>
@@ -133,10 +145,14 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="350" y="57" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1583143604326">
+    <state x="350" y="57" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1583705404875">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="350" y="57" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1583143604326" />
+    <state x="350" y="57" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1583705404875" />
+    <state x="258" y="122" key="EditFileWatcherDialog" timestamp="1583580114194">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="258" y="122" key="EditFileWatcherDialog/0.0.1366.728@0.0.1366.728" timestamp="1583580114194" />
     <state x="413" y="67" key="FileChooserDialogImpl" timestamp="1583487073105">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -157,14 +173,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1339" height="161" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1583432123273" />
+    <state x="86" y="0" key="SettingsEditor" timestamp="1583580086321">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="86" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1583580086321" />
     <state x="458" y="267" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1582124731663">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="458" y="267" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1582124731663" />
-    <state width="375" height="70" key="javadoc.popup.new" timestamp="1583430727374">
+    <state width="375" height="70" key="javadoc.popup.new" timestamp="1583750845003">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="375" height="70" key="javadoc.popup.new/0.0.1366.728@0.0.1366.728" timestamp="1583430727374" />
+    <state width="375" height="70" key="javadoc.popup.new/0.0.1366.728@0.0.1366.728" timestamp="1583750845003" />
     <state x="262" y="0" width="840" height="726" key="search.everywhere.popup" timestamp="1582897776497">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

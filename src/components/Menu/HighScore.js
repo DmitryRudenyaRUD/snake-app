@@ -1,6 +1,6 @@
 import {useHistory} from "react-router-dom";
 import React, {useState} from "react";
-import css from "./Menu.module.css";
+import css from "./Menu.module.scss";
 
 export default function HighScore() {
     let history = useHistory();

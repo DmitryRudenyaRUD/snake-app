@@ -1,30 +1,29 @@
 import React from 'react';
-import css from './FieldGame.module.css';
-import Cell from './Cell';
+import css from './articles.module.scss';
+import {WrapperForCell} from '../area/WrapperForCell';
 
-export default class FieldGame extends React.Component {
+export default function FieldGame(props) {
 
-    render() {
-        const fieldSize = this.props.store.fieldSize;
-        const columnSize = this.props.store.columnSize;
-        const fieldRow = [...new Array(fieldSize).keys()];
-        const fieldColumn = [...new Array(columnSize).keys()];
+    const fieldSize = props.store.fieldSize;
+    const columnSize = props.store.columnSize;
+    const fieldRow = [...new Array(fieldSize).keys()];
+    const fieldColumn = [...new Array(columnSize).keys()];
 
-        return (
-            <div className={css.container}>
-                <div className={css.column}>{
-                    fieldColumn.map(y => (
-                        <div className={css.row} key={y}>{
-                            fieldRow.map(x => (
-                                <Cell
-                                    key={x}
-                                    position={{x: x, y: y}}
-                                    store={this.props.store}/>
-                            ))}
-                        </div>
-                    ))
-                }</div>
-            </div>
-        )
-    }
+    return (
+        <div className={css.container}>
+            <div className={css.column}>{
+                fieldColumn.map(y => (
+                    <div className={css.row} key={y}>{
+                        fieldRow.map(x => (
+                            <WrapperForCell
+                                key={x}
+                                position={{x: x, y: y}}
+                                store={props.store}
+                            />
+                        ))}
+                    </div>
+                ))
+            }</div>
+        </div>
+    )
 }

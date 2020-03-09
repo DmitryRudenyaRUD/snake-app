@@ -1,5 +1,5 @@
 import React from 'react';
-import css from './Menu.module.css';
+import css from './Menu.module.scss';
 import {useHistory} from 'react-router-dom';
 
 
@@ -21,7 +21,7 @@ export default function ChooseSnake(props) {
                         onClick={choice}
                         className={css.icon}
                         data-num={frag + 1}>
-                        <div className={css[`s${frag}`]} data-num={frag + 1}/>
+                        <div className={css[`s${frag + 1}`]} data-num={frag + 1}/>
                         <div className={css.string} >SPEED</div>
                         <div className={css.scale}>{scale(frag)}</div>
                     </div>

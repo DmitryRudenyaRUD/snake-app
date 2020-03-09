@@ -30,11 +30,10 @@ export default class Game extends React.Component {
     }
 
     tick() {
-        const render = this.props.renderFunc;
         let tact = this.state.tact;
         this.isGameOver();
 
-        time(render, tact);
+        time(tact);
         tact = tact === 19 ? 0 : ++tact;
 
         this.setState({tact: tact})
