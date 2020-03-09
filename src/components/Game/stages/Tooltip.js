@@ -3,7 +3,7 @@ import css from './Game.module.css';
 
 export default function Tooltip(props) {
 
-        if(props.bool === true) {
+        if(props.bool) {
             return(
                 <div>
                     <div className={css.tooltip}>{

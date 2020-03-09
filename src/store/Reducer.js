@@ -1,49 +1,10 @@
-import React from 'react';
 import {store} from './State'
-import Mouse from "./Game/subjects/Mouse";
-import Snake from './Game/subjects/Snake';
-import HeadSnake from './Game/subjects/HeadSnake';
-import Blood from './Game/subjects/Blood';
 
-
-
-export function handler(props) {
-    const pos = props.position;
-    const snake = props.store.snakeSegments;
-    const head = props.store.snakeHead;
-    const mouse__1 = props.store.mouse__1;
-    const mouse__2 = props.store.mouse__2;
-    const blood = props.store._blood;
-
-
-    for (let seg of snake) {
-        if(seg.x === pos.x && seg.y === pos.y) {
-            return (<Snake id={store.model}/>)
-        }
-    }
-
-    switch (`${pos.x} ${pos.y}`) {
-        case `${head.x} ${head.y}`:
-            return <HeadSnake
-                orientation={store.orientation}
-                id={store.model}/>;
-        case `${mouse__1.x} ${mouse__1.y}`:
-            return <Mouse/>;
-        case `${mouse__2.x} ${mouse__2.y}`:
-            return <Mouse/>;
-            case `${blood.x} ${blood.y}`:
-                return <Blood/>;
-        default:
-            return;
-    }
-}
-
-
-export function time(renderFunc, tact) {
+export function time(tact) {
 
     let [h, m, s] = store.time.split(':').map((item) => parseInt(item));
 
-    movementSnake(tact, renderFunc);
+    movementSnake(tact);
 
     if(tact === 19) {
         [s, m] = s === 59 ? [0, ++m] : [++s, m];
@@ -56,7 +17,6 @@ export function time(renderFunc, tact) {
         store.recordTime = (time);
     }
 }
-
 
 export function orientation(k) {
     if(k === 'ArrowUp' && store.orientation !== 'ArrowDown') {
@@ -73,8 +33,7 @@ export function orientation(k) {
     }
 }
 
-
-function movementSnake(tact, renderFunc) {
+function movementSnake(tact) {
     let head = store.snakeHead;
     let snake = store.snakeSegments;
     let newSegment = {...head};
@@ -100,10 +59,8 @@ function movementSnake(tact, renderFunc) {
                 return
         }
         store.locationSnake = [snake, head];
-        renderFunc()
     }
 }
-
 
 function grow() {
     const head = store.snakeHead;
@@ -112,7 +69,6 @@ function grow() {
     const snake = store.snakeSegments;
 
     const array = [head, mouse__1, mouse__2, ...snake];
-
 
     if(head.x === mouse__1.x && head.y === mouse__1.y) {
         blood(mouse__1, store.orientation);
@@ -129,7 +85,6 @@ function grow() {
     return true;
 }
 
-
 function locationMouse(value, array) {
     const x = Math.floor(1 + Math.random() * (store.fieldSize - 1));
     const y = Math.floor(1 + Math.random() * (store.columnSize - 2));
@@ -141,11 +96,9 @@ function locationMouse(value, array) {
     store[value].y = y;
 }
 
-
 function handleScore() {
     store.recordScore = Math.ceil(10 / store.speed)
 }
-
 
 function blood(m, orientation) {
     let x = m.x;

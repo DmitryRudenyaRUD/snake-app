@@ -49,6 +49,9 @@ export const store = {
     get score() {
         return this._score
     },
+    get blood() {
+        return this._blood
+    },
 
     set recordTime(value) {
         this._time = value;

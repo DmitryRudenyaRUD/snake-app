@@ -1,17 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import View from './View';
+import Routes from './Routes';
 import { BrowserRouter } from 'react-router-dom';
-import {store} from './State';
+import {store} from './store/State';
 
-function renderFunc() {
+
     ReactDOM.render((
         <BrowserRouter>
-            <View store={store} renderFunc={renderFunc} />
+            <Routes store={store} />
         </BrowserRouter>
     ), document.getElementById('root'));
-}
-renderFunc();
 
 

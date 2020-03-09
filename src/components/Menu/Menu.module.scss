@@ -1,5 +1,5 @@
 .container {
-    background: url('../images/menuBg.jpg') no-repeat center center fixed;
+    background: url('../../images/menuBg.jpg') no-repeat center center fixed;
     background-size: cover;
     height: 70vh;
     width: 30vw;
@@ -15,7 +15,7 @@
     padding-top: 4vh;
     border: 3px solid black;
     border-radius: 10px;
-    background: url('../images/bg1.jpg')  center center;
+    background: url('../../images/bg1.jpg')  center center;
     background-size: contain;
     box-shadow: 1px 1px 2px black, 0 0 1em #004321;
     text-align: center;
@@ -90,92 +90,25 @@
     }
 }
 
+@for $i from 1 through 12 {
+    .s#{$i}{
+        @if $i == 12 {
+            background: url('../../images/h#{$i}.png') no-repeat;
+            background-size: 80%;
+            top: -22vh;
+            height: 18vh;
+            width: 20vw;
+            border-radius: 20px;
+        } @else {
+            background: url('../../images/s#{$i}.jpg');
+            background-size: cover;
+            height: 18vh;
+            width: 20vw;
+            border-radius: 20px;
+        }
+    }
+}
 
-.s0{
-    background: url('../images/s1.jpg');
-    background-size: cover;
-    height: 18vh;
-    width: 20vw;
-    border-radius: 20px;
-}
-.s1{
-    background: url('../images/s2.jpg');
-    background-size: cover;
-    height: 18vh;
-    width: 20vw;
-    border-radius: 20px;
-}
-.s2{
-    background: url('../images/s3.jpg');
-    background-size: cover;
-    height: 18vh;
-    width: 20vw;
-    border-radius: 20px;
-}
-.s3{
-    background: url('../images/s4.jpg');
-    background-size: cover;
-    height: 18vh;
-    width: 20vw;
-    border-radius: 20px;
-}
-.s4{
-    background: url('../images/s5.jpg');
-    background-size: cover;
-    height: 18vh;
-    width: 20vw;
-    border-radius: 20px;
-}
-.s5{
-    background: url('../images/s6.jpg');
-    background-size: cover;
-    height: 18vh;
-    width: 20vw;
-    border-radius: 20px;
-}
-.s6{
-    background: url('../images/s7.jpg');
-    background-size: cover;
-    height: 18vh;
-    width: 20vw;
-    border-radius: 20px;
-}
-.s7{
-    background: url('../images/s8.jpg');
-    background-size: cover;
-    height: 18vh;
-    width: 20vw;
-    border-radius: 20px;
-}
-.s8{
-    background: url('../images/s9.jpg');
-    background-size: cover;
-    height: 18vh;
-    width: 20vw;
-    border-radius: 20px;
-}
-.s9{
-    background: url('../images/s10.jpg');
-    background-size: cover;
-    height: 18vh;
-    width: 20vw;
-    border-radius: 20px;
-}
-.s10{
-    background: url('../images/s11.jpg');
-    background-size: cover;
-    height: 18vh;
-    width: 20vw;
-    border-radius: 20px;
-}
-.s11{
-    background: url('../images/h12.png') no-repeat;
-    background-size: 80%;
-    top: -22vh;
-    height: 18vh;
-    width: 20vw;
-    border-radius: 20px;
-}
 .string{
     float: left;
     margin-top: 10px;
@@ -207,7 +140,7 @@
     overflow-y: scroll;
 }
 .banner{
-    background: url('../images/high.jpg') no-repeat;
+    background: url('../../images/high.jpg') no-repeat;
     background-size: cover;
     margin-left: 15vw;
     margin-bottom: 10vh;
@@ -237,7 +170,7 @@
 }
 
 .exit{
-    background: url('../images/exit.jpg') no-repeat center center;
+    background: url('../../images/exit.jpg') no-repeat center center;
     background-size: cover;
     position: absolute;
     top: 5vh;

@@ -1,10 +1,12 @@
 import React from 'react';
 import {Switch, Route, Redirect} from 'react-router-dom';
-import {Menu, ChooseSnake, HighScore} from './Menu/Menu';
-import End from './Game/stages/End';
-import Game from "./Game/stages/Game";
+import {Menu} from './components/Menu/Menu';
+import End from './components/Game/stages/End';
+import Game from "./components/Game/stages/Game";
+import ChooseSnake from './components/Menu/ChooseSnake';
+import HighScore from './components/Menu/HighScore';
 
-function View(props) {
+function Routes(props) {
 
   return (
       <Switch >
@@ -18,4 +20,4 @@ function View(props) {
   );
 }
 
-export default View;
+export default Routes;
