@@ -83,7 +83,7 @@
     border-radius: 20px;
     color: white;
     font: bold 2vh/3vh Helvetica;
-    box-shadow: 5px 0px 0px #373740, 0 0 1em #ffb900;
+    box-shadow: 5px 0 0 #373740, 0 0 1em #ffb900;
 }
 .bubble1{
     height: 6vh;
@@ -115,4 +115,20 @@
     border-radius: 100%;
     top: 58vh;
     right: 29vw;
+}
+.bgLoading {
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+    padding: 30vh 0 0 25vw;
+    box-sizing: border-box;
+}
+.loading{
+    background: url('../../../images/L.gif') no-repeat;
+    background-size: cover;
+    height: 35vh;
+    width: 55vw;
+}
+.p{
+    margin: 10vh 0 0 15vw;
 }
