@@ -5,7 +5,7 @@ import css from './Game.module.css';
 export default function Back(props) {
     let history = useHistory();
 
-    if(props.end) setTimeout(() => handleClick('/end'),600);
+    if(props.end) setTimeout(() => handleClick('/end'),400);
 
     function handleClick(str) {
         history.push(str);

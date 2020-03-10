@@ -2,8 +2,8 @@ import React from 'react';
 import css from './Game.module.css';
 import FieldGame from '../area/FieldGame';
 import {time, orientation} from '../../../store/Reducer';
-import {store} from "../../../store/State";
 import Back from './Back';
+import {Loading} from './Loading';
 
 export default class Game extends React.Component {
     constructor(props) {
@@ -49,12 +49,12 @@ export default class Game extends React.Component {
             }
         }
 
-        if(head.x < 0 || head.x > store.fieldSize) {
+        if(head.x < 0 || head.x > this.props.store.fieldSize) {
             this.setState({end: true});
             clearInterval(this.timerID);
         }
 
-        if(head.y < 0 || head.y > store.columnSize) {
+        if(head.y < 0 || head.y > this.props.store.columnSize) {
             this.setState({end: true});
             clearInterval(this.timerID);
         }
@@ -62,20 +62,24 @@ export default class Game extends React.Component {
     }
 
     render() {
+        const Loading = React.lazy(() => import('./Loading'));
         return(
-            <div tabIndex="0"
-                 onKeyDown={(e) =>{ orientation(e.key)}}
-                 className={css.bg}
-                 ref={this.contain}>
-                <div className={css.container}>
-                    <div className={css.score}/>
-                    <span className={css.span}>{this.props.store.score}</span>
-                    <div className={css.clock}/>
-                    <span className={css.span}>{this.props.store.time}</span>
-                    <Back end={this.state.end}/>
+            <React.Suspense fallback={Loading}>
+                <div tabIndex="0"
+                     onKeyDown={(e) =>{ orientation(e.key)}}
+                     className={css.bg}
+                     ref={this.contain}>
+                    <div className={css.container}>
+                        <div className={css.score}/>
+                        <span className={css.span}>{this.props.store.score}</span>
+                        <div className={css.clock}/>
+                        <span className={css.span}>{this.props.store.time}</span>
+                        <Back end={this.state.end}/>
+                    </div>
+                    <FieldGame store={this.props.store}/>
                 </div>
-                <FieldGame store={this.props.store}/>
-            </div>
+            </React.Suspense>
+
         )
     }
 }

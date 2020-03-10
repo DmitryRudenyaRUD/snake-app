@@ -4,8 +4,8 @@ import {WrapperForCell} from '../area/WrapperForCell';
 
 export default function FieldGame(props) {
 
-    const fieldSize = props.store.fieldSize;
-    const columnSize = props.store.columnSize;
+    const {fieldSize, columnSize} = props.store;
+
     const fieldRow = [...new Array(fieldSize).keys()];
     const fieldColumn = [...new Array(columnSize).keys()];
 
