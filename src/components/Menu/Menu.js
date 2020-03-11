@@ -16,7 +16,6 @@ export function Menu() {
             <Link
                 to='/highScore'
                 className={css.nav}
-
             >High Score</Link>
         </div>
     )

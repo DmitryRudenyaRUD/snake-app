@@ -3,6 +3,7 @@
     background-size: cover;
     height: 100vh;
     width: 100vw;
+    box-sizing: border-box;
 }
 .span {
     padding: 2vh 1vw;
@@ -31,12 +32,21 @@
     margin-left: 3vw;
     border-radius: 1vw;
 }
+.steps {
+    background: url('../../../images/st2.png') no-repeat;
+    background-size: 100%;
+    height: 14vh;
+    width: 6.5vw;
+    margin-top: 1vh;
+    margin-left: 7vw;
+}
 
 .exit {
     background: url('../../../images/exit.jpg') no-repeat center center;
     background-size: cover;
-    margin-left: 50vw;
-    margin-top: 5vh;
+    position: absolute;
+    left: 85vw;
+    top: 5vh;
     height: 8vh;
     width: 8vw;
 }

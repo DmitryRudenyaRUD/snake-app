@@ -4,7 +4,7 @@ import {useHistory} from 'react-router-dom';
 
 
 export default function ChooseSnake(props) {
-    let history = useHistory();
+    const history = useHistory();
 
     function choice(e) {
         props.store.chooseModel = e.target.dataset.num;
