@@ -162,11 +162,21 @@
     border-radius: 10px;
 
 }
+.header{
+    margin: 0 0 0 61vw;
+    color: #bdb76b;
+    font: bold 3.5vh/0vh Helvetica;
+}
 
 .score{
     float: right;
-    margin-right: 3vw;
+    margin-right: 1vw;
     color: #b40000;
+}
+.steps{
+    float: right;
+    margin-right: 3vw;
+    color: #105615;
 }
 
 .exit{

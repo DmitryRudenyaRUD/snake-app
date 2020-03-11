@@ -26,13 +26,14 @@ export default function End () {
             setTooltip(true);
             return;
         }
-        fetch('http://www.mocky.io/v2/5e5fe9c1330000800097b6f3',{
+
+        fetch('http://www.mocky.io/v2/5e68e9022f000085cad8b0cb',{
             method: 'POST',
             body: JSON.stringify({[text]: store.score})
         })
-        .then(data => console.log(JSON.stringify({[text]: store.score}), data));
+        .then(data => console.log(JSON.stringify({[text]: `${store.score}/${store._steps}`}), data));
 
-        localStorage.setItem([text], store.score);
+        localStorage.setItem([text], `${store.score}/${store._steps}`);
 
         history.push('/highScore');
     }

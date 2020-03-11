@@ -5,7 +5,6 @@ import Routes from './Routes';
 import {BrowserRouter} from 'react-router-dom';
 import {store} from './store/State';
 
-
 ReactDOM.render((
     <BrowserRouter>
         <Routes store={store}/>

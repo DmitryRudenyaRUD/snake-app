@@ -11,21 +11,8 @@ export default function HighScore() {
         window.location.reload(false);
     });
 
-    const results = ((fetching) => {
-        let array = [...fetching];
-        for(let i = 0; i < localStorage.length; i++) {
-            let key = localStorage.key(i);
-            array.push({ [key]: localStorage.getItem(key) })
-        }
-
-        return array.sort(
-            (a, b) => 1 / a[Object.keys(a)] - 1 / b[Object.keys(b)]
-        )
-    });
-
-
     if(fetching.length < 2) {
-        fetch(' http://www.mocky.io/v2/5e5fe9c1330000800097b6f3?mocky-delay=1000ms',)
+        fetch('http://www.mocky.io/v2/5e68ece52f00007559d8b102?mocky-delay=1000ms',)
         .then(response => {
             if(response.status !== 200) {
                 return Promise.reject(new Error(response.statusText))
@@ -36,14 +23,27 @@ export default function HighScore() {
         .then(data => changeState(data))
         .catch(error => {
             console.log(error);
-            changeState([{'no result': 'the server is not responding'}])
+            changeState([{'No result! The server is not responding': '!'}])
         })
     }
+
+    const results = ((fetching) => {
+        let array = [...fetching];
+        for(let i = 0; i < localStorage.length; i++) {
+            let key = localStorage.key(i);
+            array.push({ [key]: localStorage.getItem(key) });
+        }
+
+        return array.sort(
+            (a, b) => 1 / a[Object.keys(a)].match(/\d+/) - 1 / b[Object.keys(b)].match(/\d+/)
+        )
+    });
 
     return (
         <div className={css.bgHS} >
             <div className={css.banner}/>
             <div className={css.exit} onClick={handleClick}/>
+            <span className={css.header}>SCORE STEPS</span>
             <ul>{
                 ( results(fetching) ).map((item, ind) => (
                     <li
@@ -52,7 +52,8 @@ export default function HighScore() {
                         <>
                             <span>{`${ind + 1}. `}</span>
                             <span>{Object.keys(item)}</span>
-                            <span className={css.score}>{item[Object.keys(item)]}</span>
+                            <span className={css.steps}>{item[Object.keys(item)].match(/\d+$/)}</span>
+                            <span className={css.score}>{item[Object.keys(item)].match(/\d+/)}</span>
                         </>
                     }</li>
                 ))

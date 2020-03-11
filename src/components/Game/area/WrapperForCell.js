@@ -34,6 +34,5 @@ export function WrapperForCell(props) {
                 return;
         }
     };
-    let classAttribute  = handler();
-    return <Cell class={classAttribute} />
+    return <Cell class={handler()} />
 }

@@ -12,9 +12,10 @@ export const store = {
     _mouse__2: {x: 20, y: 10},
     _time:'0:00:00',
     _model: '8',
-    _speed: 3,
+    _speed: 100,
     _score: 0,
     _blood: {x: -1, y: -1},
+    _steps: 0,
 
     get fieldSize() {
         return this._fieldSize
@@ -67,11 +68,11 @@ export const store = {
         this._model = value;
     },
     set recordSpeed(value) {
-        this._speed = value < 4 ? 10 :
-            value < 6 ? 5 :
-                value < 8 ? 4 :
-                    value < 11 ? 3 :
-                        value < 12 ? 2 : 1
+        this._speed = value < 4 ? 350 :
+            value < 6 ? 250 :
+                value < 8 ? 200 :
+                    value < 11 ? 100 :
+                        value < 12 ? 75 : 45
 
     },
     set recordScore(value) {
