@@ -17,6 +17,10 @@ export function time(store, originTime) {
 }
 
 export function orientation(k, store) {
+
+    if(k === ' ') store.pause = !store.pause;
+    if(store.pause) return;
+
     if(k === 'ArrowUp' && store.orientation !== 'ArrowDown') {
         store.recordOrientation = k
     }
@@ -29,6 +33,7 @@ export function orientation(k, store) {
     if(k === 'ArrowLeft' && store.orientation !== 'ArrowRight') {
         store.recordOrientation = k
     }
+
 }
 
 export function movementSnake(store) {

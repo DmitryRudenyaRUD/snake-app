@@ -51,6 +51,34 @@
     width: 8vw;
 }
 
+.bgTips {
+    position: absolute;
+    top: 30vh;
+    display: flex;
+    flex-direction: column;
+}
+.arrow {
+    background: url('../../../images/arrow.png') no-repeat;
+    background-size: 100%;
+    height: 17vh;
+    width: 15vw;
+    margin-top: 4vh;
+}
+.space{
+    background: url('../../../images/space.png') no-repeat;
+    background-size: 100%;
+    height: 5vh;
+    width: 14vw;
+    margin-left: 0.7vw;
+    margin-top: 4vh;
+}
+.tips{
+    text-shadow: 5px 6px 1px #373740, 0 0 1em #ffb900;
+    color: #fbfb3d;
+    font:bold 4vh/4vh Helvetica;
+    text-align: center;
+}
+
 .bgEnd{
     background: url('../../../images/bg1.jpg') no-repeat;
     background-size: cover;
@@ -141,4 +169,14 @@
 }
 .p{
     margin: 10vh 0 0 15vw;
+}
+
+.pause{
+    position: absolute;
+    top: 33vh;
+    left: 42vw;
+    background: url('../../../images/pause.png') no-repeat;
+    background-size: 100%;
+    height: 35vh;
+    width: 15vw;
 }

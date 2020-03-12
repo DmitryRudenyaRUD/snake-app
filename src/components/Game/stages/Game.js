@@ -15,6 +15,7 @@ export default class Game extends React.Component {
             dynamics: 0,
         };
         this.contain = React.createRef();
+        this.pause = React.createRef();
     }
 
     componentDidMount() {
@@ -33,12 +34,15 @@ export default class Game extends React.Component {
     tick() {
         const store = this.props.store;
         const originTime = this.state.originTime;
+        if(this.props.store.pause) this.pause.current.classList.toggle(css.pause, true);
 
-        isGameOver(store) && this.end();
-        movementSnake(store);
-        time( store, originTime ) && this.setState({originTime: Date.now()});
-
-        this.setState({dynamics: (this.state.dynamics + 1)})
+        if(!this.props.store.pause) {
+            this.pause.current.classList.toggle(css.pause, false);
+            isGameOver(store) && this.end();
+            movementSnake(store);
+            time( store, originTime ) && this.setState({originTime: Date.now()});
+            this.setState({dynamics: (this.state.dynamics + 1)})
+        }
     }
 
     back() {
@@ -66,7 +70,14 @@ export default class Game extends React.Component {
                     <ProgressBar class={'steps'} child={this.state.dynamics}  />
                     <div className={css.exit} onClick={this.back} />
                 </div>
+                <div className={css.bgTips}>
+                    <div className={css.arrow} />
+                    <p className={css.tips}>MOVEMENTS</p>
+                    <div className={css.space} />
+                    <p className={css.tips}>PAUSE</p>
+                </div>
                 <FieldGame store={this.props.store}/>
+                <div ref={this.pause} />
             </div>
 
         )
