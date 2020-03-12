@@ -16,6 +16,7 @@ export const store = {
     _score: 0,
     _blood: {x: -1, y: -1},
     _steps: 0,
+    pause: false,
 
     get fieldSize() {
         return this._fieldSize
